@@ -1,0 +1,165 @@
+version: "3.1"
+
+nlu:
+- intent: greet #1
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye #2
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm #3
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny #4
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge #5
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: topic_assembly #6 
+  examples: |
+    - history of [assembly](entity_topic)
+    - need to know about [assembly](entity_topic)
+    - I'm interested in the history of [assembly](entity_topic)
+    - [assembly](entity_topic)
+
+- intent: topic_fortran #7 
+  examples: |
+    - history of [fortran](entity_topic)
+    - need to know about [fortran](entity_topic)
+    - I'm interested in the history of [fortran](entity_topic)
+    - [fortran](entity_topic)
+
+- intent: topic_cobol #8 
+  examples: |
+    - history of [cobol](entity_topic)
+    - need to know about [cobol](entity_topic)
+    - I'm interested in the history of [cobol](entity_topic)
+    - [cobol](entity_topic)
+
+- intent: topic_basic #9 
+  examples: |
+    - history of [basic](entity_topic)
+    - need to know about [basic](entity_topic)
+    - I'm interested in the history of [basic](entity_topic)
+    - [basic](entity_topic)
+
+- intent: topic_logo #10 
+  examples: |
+    - history of [logo](entity_topic)
+    - need to know about [logo](entity_topic)
+    - I'm interested in the history of [logo](entity_topic)
+    - [logo](entity_topic)
+
+- intent: topic_c #11
+  examples: |
+    - [c](entity_topic)
+    - need to know about the [c](entity_topic)
+    - I'm interested in history of [c](entity_topic) .
+    - history of [c](entity_topic)
+
+- intent: topic_sql #12 
+  examples: |
+    - history of [sql](entity_topic)
+    - need to know about [sql](entity_topic)
+    - I'm interested in the history of [sql](entity_topic)
+    - [sql](entity_topic)
+
+- intent: topic_python #13
+  examples: |
+    - history of [python](entity_topic)
+    - need to know about [python](entity_topic)
+    - I'm interested in the history of [python](entity_topic)
+    - [python](entity_topic)
+
+- intent: topic_lua #14
+  examples: |
+    - history of [lua](entity_topic)
+    - need to know about [lua](entity_topic)
+    - I'm interested in the history of [lua](entity_topic)
+    - [lua](entity_topic)
+
+- intent: topic_java #15
+  examples: |
+    - history of [java](entity_topic)
+    - need to know about [java](entity_topic)
+    - I'm interested in the history of [java](entity_topic)
+    - [java](entity_topic)
+
+- intent: topic_javascript #16
+  examples: |
+    - history of [javascript](entity_topic)
+    - need to know about [javascript](entity_topic)
+    - I'm interested in the history of [javascript](entity_topic)
+    - [javascript](entity_topic)
+
+- intent: topic_julia #17
+  examples: |
+    - history of [julia](entity_topic)
+    - need to know about [julia](entity_topic)
+    - I'm interested in the history of [julia](entity_topic)
+    - [julia](entity_topic)
+
+- intent: topic_go #18
+  examples: |
+    - history of [go](entity_topic)
+    - need to know about [go](entity_topic)
+    - I'm interested in the history of [go](entity_topic)
+    - [go](entity_topic)
+
+- intent: topic_rust #19
+  examples: |
+    - history of [rust](entity_topic)
+    - need to know about [rust](entity_topic)
+    - I'm interested in the history of [rust](entity_topic)
+    - [rust](entity_topic)
+
+- intent: question #20
+  examples: |
+    - Who funded the project?
+    - What are the major new releases?
+    - What are the useful characteristics?
+    - When was it created?
+    - Where was the syntax borrowed from?
+    - what was the first attempt at creating called?
+    - Who extended the program?

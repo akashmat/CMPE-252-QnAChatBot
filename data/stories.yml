@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: asking without summary
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_begin
+  - or:
+    - intent: topic_assembly
+    - intent: topic_fortran
+    - intent: topic_cobol
+    - intent: topic_basic
+    - intent: topic_logo
+    - intent: topic_c
+    - intent: topic_sql
+    - intent: topic_python
+    - intent: topic_lua
+    - intent: topic_java
+    - intent: topic_javascript
+    - intent: topic_julia
+    - intent: topic_go
+    - intent: topic_rust
+  - action: utter_question
+  - intent: question
+  - action: action_qna
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_question
+
+- story: asking with summary
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_begin
+  - or:
+    - intent: topic_assembly
+    - intent: topic_fortran
+    - intent: topic_cobol
+    - intent: topic_basic
+    - intent: topic_logo
+    - intent: topic_c
+    - intent: topic_sql
+    - intent: topic_python
+    - intent: topic_lua
+    - intent: topic_java
+    - intent: topic_javascript
+    - intent: topic_julia
+    - intent: topic_go
+    - intent: topic_rust
+  - action: utter_question
+  - intent: question
+  - action: action_qna
+  - action: utter_did_that_help
+  - intent: deny
+  - action: action_sum
+  - action: utter_goodbye

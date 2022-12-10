@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- topic_assembly
+- topic_fortran
+- topic_cobol
+- topic_basic
+- topic_logo
+- topic_c
+- topic_sql
+- topic_python
+- topic_lua
+- topic_java
+- topic_javascript
+- topic_julia
+- topic_go
+- topic_rust
+- question
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  utter_begin:
+  - text: "What language are you interested in?"
+  utter_question:
+  - text: "What do you want to know about the history of {topic}?"
+  utter_did_that_help:
+  - text: "Did that help you?"
+  utter_goodbye:
+  - text: "Bye"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+entities:
+  - entity_topic
+
+slots:
+  topic:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: entity_topic
+
+actions:
+  - action_qna 
+  - action_sum
+  - utter_greet
+  - utter_question  
+  - utter_did_that_help
+  - utter_goodbye
+  - utter_iamabot
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
